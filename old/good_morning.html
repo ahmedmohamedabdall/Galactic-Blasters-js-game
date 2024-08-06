@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let getbody= document.body;
+    let newElement=document.createElement('h1');
+
+
+    let date = new Date();
+
+    let nowHour=date.getHours();
+
+
+    let message;
+
+    if (nowHour >= 4 && nowHour < 10) {
+        message='good morning';
+
+        
+    }else if (nowHour >= 10 && nowHour<15) {
+        message='good afternoon';
+
+        
+    }else if (nowHour >= 15 && nowHour < 23) {
+        message='good night';
+
+        
+    }else{
+
+        message='good day';
+
+    }
+        newElement.append(message);
+
+        getbody.append(newElement);
+
+        newElement.setAttribute('class','welcome');
+
+        //cssText is a method that allow you to add many styling to the element
+
+        newElement.style.cssText='text-align:center;font-size:50px;font-family:Arial';
+
+</script>
+</html>
